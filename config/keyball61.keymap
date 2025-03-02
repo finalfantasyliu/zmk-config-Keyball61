@@ -27,6 +27,38 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        move_window_right {
+            bindings = <&ctrl_arrow_right>;
+            key-positions = <32 33>;
+        };
+
+        move_window_left {
+            bindings = <&ctrl_arrow_left>;
+            key-positions = <27 28>;
+        };
+    };
+
+    macros {
+        ctrl_arrow_left: ctrl_arrow_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_CONTROL &kp LEFT_ARROW>, <&macro_press>;
+
+            label = "CTRL_ARROW_LEFT";
+        };
+
+        ctrl_arrow_right: ctrl_arrow_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_CONTROL &kp RIGHT_ARROW>, <&macro_press>;
+
+            label = "CTRL_ARROW_RIGHT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
