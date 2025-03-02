@@ -140,17 +140,14 @@ nice_view_spi: &spi2 {
         label = "Ctrl + Switch Window Left";
         bindings = <&kp LCTL &kp LEFT>;
     };
-
     ctrl_win_switch_right: ctrl_win_switch_right_behavior {
         compatible = "zmk,behavior-macro";
         label = "Ctrl + Switch Window Right";
         bindings = <&kp LCTL &kp RIGHT>;
     };
-
   trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
-
   };
 };
 
