@@ -138,19 +138,13 @@ nice_view_spi: &spi2 {
     ctrl_win_switch_left: ctrl_win_switch_left_behavior {
         compatible = "zmk,behavior-macro";
         label = "Ctrl + Switch Window Left";
-        bindings = <
-            &kp LCTL  # Hold Control
-            &kp LEFT  # Press Left Arrow
-        >;
+        bindings = <&kp LCTL &kp LEFT>;
     };
 
     ctrl_win_switch_right: ctrl_win_switch_right_behavior {
         compatible = "zmk,behavior-macro";
         label = "Ctrl + Switch Window Right";
-        bindings = <
-            &kp LCTL  # Hold Control
-            &kp RIGHT # Press Right Arrow
-        >;
+        bindings = <&kp LCTL &kp RIGHT>;
     };
 
   trackball_listener {
