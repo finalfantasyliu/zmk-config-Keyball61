@@ -8,6 +8,7 @@
 #include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
+#include <behaviors/hold-tap.dtsij>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
@@ -40,7 +41,7 @@
         ctrl_arrow_right: ctrl_arrow_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&hmmm LEFT_CONTROL RIGHT_ARROW>, <&macro_press>;
+            bindings = <&hm LEFT_CONTROL RIGHT_ARROW>, <&macro_press>;
             label = "CTRL_ARROW_RIGHT";
         };
     };
