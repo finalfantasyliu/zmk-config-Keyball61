@@ -435,7 +435,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
-- p: [32, 33]
+- p: [45, 46]
   k: '&ctrl_arrow_right'
-- p: [27, 28]
+- p: [39, 40]
   k: '&ctrl_arrow_left'
