@@ -134,6 +134,25 @@ nice_view_spi: &spi2 {
 };
 
 / {
+ # Define behavior for moving windows left and right with Control + Trackball
+    ctrl_win_switch_left: ctrl_win_switch_left_behavior {
+        compatible = "zmk,behavior-macro";
+        label = "Ctrl + Switch Window Left";
+        bindings = <
+            &kp LCTL  # Hold Control
+            &kp LEFT  # Press Left Arrow
+        >;
+    };
+
+    ctrl_win_switch_right: ctrl_win_switch_right_behavior {
+        compatible = "zmk,behavior-macro";
+        label = "Ctrl + Switch Window Right";
+        bindings = <
+            &kp LCTL  # Hold Control
+            &kp RIGHT # Press Right Arrow
+        >;
+    };
+
   trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
