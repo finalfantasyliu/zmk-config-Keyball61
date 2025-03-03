@@ -33,14 +33,28 @@
         ctrl_arrow_left: ctrl_arrow_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LEFT_CONTROL>, <&macro_tap &kp LEFT_ARROW>, <&macro_release &kp LEFT_CONTROL>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp LEFT_ARROW>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>;
+
             label = "CTRL_ARROW_LEFT";
         };
 
         ctrl_arrow_right: ctrl_arrow_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LEFT_CONTROL>, <&macro_tap &kp RIGHT_ARROW>, <&macro_release &kp LEFT_CONTROL>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp RIGHT_ARROW>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>;
+
             label = "CTRL_ARROW_RIGHT";
         };
     };
@@ -74,11 +88,11 @@
         symbol_layer {
             label = "SYM";
             bindings = <
-&trans  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                  &trans          &trans     &trans                &trans                 &trans        &trans
-&trans  &trans      &trans        &trans        &trans        &trans                        &kp AMPERSAND   &trans     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT   &trans
-&trans  &trans      &trans        &trans        &trans        &trans                        &kp MINUS       &kp EQUAL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION  &trans
-&trans  &trans      &trans        &trans        &trans        &trans        &trans  &trans  &kp UNDERSCORE  &kp PLUS   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT        &trans
-&trans  &trans      &trans        &trans        &trans        &trans        &trans  &trans  &trans                                                                  &trans        &trans
+&trans  &bt BT_CLR       &bt BT_SEL 0   &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3                  &trans          &trans         &trans                &trans                 &trans        &trans
+&trans  &trans           &kp ASTERISK   &kp HASH          &trans        &trans                        &kp PIPE        &kp AMPERSAND  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT   &trans
+&trans  &kp EXCLAMATION  &kp LESS_THAN  &kp GREATER_THAN  &trans        &trans                        &kp MINUS       &kp EQUAL      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION  &trans
+&trans  &kp CARET        &trans         &trans            &trans        &trans        &trans  &trans  &kp UNDERSCORE  &kp PLUS       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT        &trans
+&trans  &trans           &trans         &trans            &trans        &trans        &trans  &trans  &trans                                                                      &trans        &trans
             >;
         };
 
